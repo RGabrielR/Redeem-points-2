@@ -22,7 +22,6 @@ import ProductsDisplay from "../components/frontendComponents/elements/ProductsD
 import Footer from "../components/frontendComponents/elements/Footer";
 
 const MainPage = (props) => {
-  console.log(process.env.NEXT_PUBLIC_USER, process.env.NEXT_PUBLIC_PRODUCTS)
   const {
     fetchUser,
     user,
