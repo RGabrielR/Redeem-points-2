@@ -5,7 +5,6 @@ const VaultTable = ({ redeemHistory }) => {
 
   useEffect(() => {
     setTableElements(vault);
-    console.log(tableElements);
   }, []);
 
   const group = (arr) => {
