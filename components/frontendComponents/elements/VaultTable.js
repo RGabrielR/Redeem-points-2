@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const VaultTable = ({ redeemHistory }) => {
-  const [tableElements, setTableElements] = useState(Vault);
+  const [tableElements, setTableElements] = useState([]);
 
   useEffect(() => {
     setTableElements(Vault);
@@ -41,7 +41,6 @@ const VaultTable = ({ redeemHistory }) => {
       case "cost":
         const orderByCost = [...tableElements].sort((a, b) => b.cost - a.cost);
         return setTableElements(orderByCost);
-        break;
       default:
         return tableElements;
     }

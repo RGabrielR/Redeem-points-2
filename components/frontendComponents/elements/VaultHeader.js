@@ -1,6 +1,6 @@
 import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 import Link from 'next/link';
-const VaultTitleAndDescription = () => {
+const VaultHeader = () => {
   return (
     <>
       <div className="flex flex-row justify-center w-full  ">
@@ -20,4 +20,4 @@ const VaultTitleAndDescription = () => {
   );
 };
 
-export default VaultTitleAndDescription;
+export default VaultHeader;

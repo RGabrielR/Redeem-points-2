@@ -10,10 +10,8 @@ const Vault = (props) => {
     const {fetchUser} = props;
 
     useEffect(() => {
-       if(!redeemHistory) return(fetchUser())
+      fetchUser()
       }, []);
-
-      if(!redeemHistory) return "loading...";
 
     return ( 
         <>
