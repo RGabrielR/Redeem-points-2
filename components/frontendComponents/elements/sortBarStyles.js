@@ -1,5 +1,3 @@
-
-
 const sortBarStyles = {
     control: (base, state) => ({
       ...base,
@@ -12,6 +10,5 @@ const sortBarStyles = {
       },
     }),
 };
- 
  
 export default sortBarStyles;

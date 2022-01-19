@@ -14,57 +14,72 @@ import {
   sortCannotAfford,
   sortCanAfford,
 } from "../components/redux/actions/productActions";
-import Header from '../components/frontendComponents/elements/Header';
-import NavBar from '../components/frontendComponents/elements/NavBar';
-import SortBar from '../components/frontendComponents/elements/SortBar';
+import { redeemProduct } from "../components/redux/actions/redeemActions";
+import Header from "../components/frontendComponents/elements/Header";
+import NavBar from "../components/frontendComponents/elements/NavBar";
+import SortBar from "../components/frontendComponents/elements/SortBar";
 import ProductsDisplay from "../components/frontendComponents/elements/ProductsDisplay";
-import Footer from '../components/frontendComponents/elements/Footer';
+import Footer from "../components/frontendComponents/elements/Footer";
 
 const MainPage = (props) => {
-  console.log(props);
-  const {fetchUser, fetch_products, buy1000, buy5000, buy7500, sortingLowest, sortingHighest, sortingPredefined, sortCannotAfford, sortCanAfford} = props;
-  const {name, points} = props.user.user;
-  const {products} = props.products;
-
+  console.log(process.env.NEXT_PUBLIC_USER, process.env.NEXT_PUBLIC_PRODUCTS)
+  const {
+    fetchUser,
+    user,
+    fetch_products,
+    buy1000,
+    buy5000,
+    buy7500,
+    sortingLowest,
+    sortingHighest,
+    sortingPredefined,
+    sortCannotAfford,
+    sortCanAfford,
+    redeemProduct,
+  } = props;
+  const { name, points } = props.user.user;
+  const { products } = props.products;
   useEffect(() => {
     fetchUser();
     fetch_products();
   }, []);
-  
-  // if (!user || !product) return <div className="lds-circle"> </div>;
 
+  if(!user || !products) return 'loading...';
+  
   return (
     <>
-   
-    <Header 
-    name={name} 
-    points={points} />
-    
-    <NavBar 
-    title="Redeem Points" 
-    buy1000={buy1000} 
-    buy5000={buy5000} 
-    buy7500={buy7500} />
-    
-    <SortBar 
-    sortingPredefined={sortingPredefined} 
-    sortingHighest={sortingHighest} 
-    sortCanAfford={sortCanAfford} 
-    sortingLowest={sortingLowest} 
-    sortCannotAfford={sortCannotAfford} 
-    products={products}/>
+      <Header name={name} points={points} />
 
-    <ProductsDisplay 
-    products={products}
-    points={points} />
+      <NavBar
+        title="Redeem Points"
+        buy1000={buy1000}
+        buy5000={buy5000}
+        buy7500={buy7500}
+      />
 
-    <Footer/>
+      <SortBar
+        sortingPredefined={sortingPredefined}
+        sortingHighest={sortingHighest}
+        sortCanAfford={sortCanAfford}
+        sortingLowest={sortingLowest}
+        sortCannotAfford={sortCannotAfford}
+        products={products}
+        points={points}
+      />
+
+      <ProductsDisplay
+        products={products}
+        points={points}
+        redeemProduct={redeemProduct}
+      />
+
+      <Footer />
     </>
-  )
-}
+  );
+};
 const mapStateToProps = (state) => ({
   user: state.user,
-  products: state.products
+  products: state.products,
 });
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -104,4 +119,3 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(MainPage);
-

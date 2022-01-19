@@ -1,27 +1,19 @@
-@use './elements/index.scss' as *;
+@use "./elements/index.scss" as *;
 
-.background-buyButton{
-    background-color: $secondary_color;
-    padding: 0.5rem 3rem 1rem 3rem;
-    border-bottom-left-radius: 90%;
-    border-bottom-right-radius: 90%;
+.background-buyButton {
+  @include headerLink($secondary-color);
 }
 
-.vault-title{
-    font-family: $font;
-    font-size: $font-xxl;
-    color: $white;
-    text-align: center;
-    cursor: default;
-    text-shadow: 0px 5px 7px rgb(0, 0, 0);
+.vault-title {
+  @include vaultText($font-xxl);
+  @media screen and (max-width: $phone) {
+    @include vaultText($font-xl);
+  }
 }
 
-.vault-description{
-    font-family: $font;
-    font-size: $font-xl;
-    color: $white;
-    text-align: center;
-    cursor: default;
-    text-shadow: 0px 5px 7px rgb(0, 0, 0);
+.vault-description {
+  @include vaultText($font-xl);
+  @media screen and (max-width: $phone) {
+    @include vaultText($font-large);
+  }
 }
-

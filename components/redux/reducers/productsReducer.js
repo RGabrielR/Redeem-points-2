@@ -1,6 +1,5 @@
 import * as t from '../types';
 
-
 const initialState = {
   loading: false,
   products: [],
@@ -10,7 +9,6 @@ const initialState = {
 const productsReducer = (state = initialState ,  action) => {
   
     switch(action.type) {
-        
         case t.FETCH_PRODUCTS_REQUEST:
         return {
           ...state,

@@ -6,12 +6,15 @@ th{
     color: $primary_color;
     cursor: pointer;
 }
+
 .border-right{
     border-right: solid $ternary-color $standar 
 }
+
 tr{
     border-bottom: solid $ternary-color $standar;
 }
+
 td{
     font-family: $font;
     text-align: center;
@@ -19,6 +22,7 @@ td{
     color: $white;
     cursor: default;
 }
+
 td span {
     background-color: $black;
     padding: 0 1rem ;

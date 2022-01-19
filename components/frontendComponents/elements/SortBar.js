@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import Swal from "sweetalert2";
 import sortBarStyles from "./sortBarStyles";
 import options from "./options";
 
-const SortBar = ({sortingPredefined, sortingHighest, sortCanAfford, sortingLowest,sortCannotAfford, products}) => {
+const SortBar = ({
+  sortingPredefined, 
+  sortingHighest, 
+  sortCanAfford, 
+  sortingLowest,
+  sortCannotAfford, 
+  products, 
+  points}) => {
     const sortProducts = (option) => {
         switch (option.value) {
           case "predefined":
@@ -22,7 +28,7 @@ const SortBar = ({sortingPredefined, sortingHighest, sortCanAfford, sortingLowes
     
     return ( 
         <>
-        <div className="m-12 w-96">
+        <div className="w-72  mt-6 ml-6 md:m-12 md:w-96">
          <Select
             options={options}
             onChange={(e) => sortProducts(e)}

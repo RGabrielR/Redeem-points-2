@@ -1,8 +1,5 @@
 @use './elements/index.scss' as *;
 
 .background-vaultButton{
-    background-color: $primary_color;
-    padding: 0.5em 3rem 1rem 3rem;
-    border-bottom-left-radius: 90%;
-    border-bottom-right-radius: 90%;
+   @include headerLink($primary-color)
 }

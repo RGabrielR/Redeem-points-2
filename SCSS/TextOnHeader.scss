@@ -7,7 +7,10 @@
     font-size: $font-large;
     margin-left: 1rem;
     margin-top: 0.2rem;
-    cursor: default;
+    @include onHover($secondary_on_hover, default);
+    @media screen and (max-width: $phone) {
+        width: 30%;
+    }
 }
 
 .text-on-points{
@@ -16,7 +19,7 @@
     font-size: $font-large;
     margin-top: 0.2rem;
     margin-right: 1rem;
-    cursor: default;
+    @include onHover($ternary_on-hover, default)
 }
 
 

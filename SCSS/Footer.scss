@@ -1,32 +1,38 @@
 @use './elements/index.scss' as *;
 
 .primary-block{
-    width: 100%;
-    background-color: $primary_color;
-    height: 10rem;
-    position: relative;
-    bottom: 0;
+    @include footerBlocks($primary-color, $footer-block);
 }
+
 .secondary-block{
-    width: 100%;
-    background-color: $secondary_color;
-    height: 8rem;
+    @include footerBlocks($secondary-color, calc($footer-block - $sustractor) )
 }
+
 .ternary-block{
-    width: 100%;
-    background-color: $ternary_color;
-    height: 6rem;
+    @include footerBlocks($ternary-color, calc($footer-block - ($sustractor * 2)))
 }
+
 .last-block{
-    width: 100%;
-    background-color: $black;
-    height: 4rem;
+    @include footerBlocks($black, calc($footer-block - ($sustractor * 3)) );
+    @media screen and (max-width: $phone) {
+        @include footerBlocks($black, calc($footer-block ) )
+    }
+    @media screen and (max-width: $monitor) {
+        @include footerBlocks($black, calc($footer-block - $sustractor * 3 ) )
+    }
 }
+
 .footer-text{
-    font-family: $font;
-    font-size: $font-large;
-    color: $white;
-    cursor: default;
-    text-shadow: 0px 5px 7px rgb(0, 0, 0);
-    text-align: center;
+    @include vaultText($font-medium);
+    padding: 1rem 2rem;
+    @media screen and (max-width: $phone) {
+    @include vaultText($font-small);
 }
+
+@media screen and (max-width: $monitor) {
+    @include vaultText($font-medium);
+    padding: 0;
+}
+}
+
+ 

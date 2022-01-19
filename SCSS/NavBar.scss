@@ -1,61 +1,109 @@
 @use './elements/index.scss' as *;
-@mixin onHover($darker, $cursor){
-    cursor: $cursor;
-    &:hover{
-        color: $darker;
-}}
+
 .title{
     width: 80%;
     color: $white;
     font-family: $font;
     font-size: $font-xl;
     cursor: default;
+    text-shadow: 0px 5px 7px rgb(0, 0, 0);
+    position: inline;
+    @media screen and (max-width: $phone) {
+        font-size: $font-large;
+    }
+    @media screen and ( max-width: $monitor) {
+        
+    }
 }
+
 .first-block{
-    background-color: $black;
-    padding: 1rem 1.5rem;
-    width: 90%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-   
+    margin-left: -30%;
+    padding: 1rem 10rem;
+    @include blocksOnHeader(120%, $black );
+    &:hover{
+        animation: waves 3s infinite 0.6s;
+    }
+    @media screen and (max-width: $phone) {
+        margin-left: -30%;
+        padding: 1rem 10rem;
+    }
+    @media screen and ( max-width: $monitor) {
+        @include blocksOnHeader(90%, $black );
+        margin-left: 0%;
+        padding: 1rem 1rem 1rem 2rem; 
+    }
 }
+
 .second-block{
-    background-color: $ternary_color;
-    width: 90%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
+    @include blocksOnHeader(90%, $ternary_color );
+    &:hover{
+        animation: waves 3s infinite 0.2s;
+    }
+    @media screen and (max-width: $monitor) {
+        @include blocksOnHeader(90%, $ternary_color );
+    }
 }
+
 .third-block{
-    background-color: $secondary_color;
-    width: 90%;   
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
+    @include blocksOnHeader(90%, $secondary_color );
+    &:hover{
+        animation: waves 3s infinite;
+    }
+    @media screen and (max-width: $monitor) {
+        @include blocksOnHeader(90%, $secondary_color );
+    }
+    
 }
+
 .fourth-block{
-    background-color: $primary_color;
-    width: 40%;   
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
+    @include blocksOnHeader(40%, $primary_color );
+    &:hover{
+        animation: waves 3s infinite 0.4s;
+    }
+    @media screen and (max-width: $phone) {
+        @include blocksOnHeader(80%, $primary_color );
+    }
+    @media screen and (max-width: $monitor) {
+        @include blocksOnHeader(70%, $primary_color );
+    }
 }
+
 .navBar{
     background-color: $black;
     width: 100%;
 }
+
 .plus-primary{
     color: $primary_color;
     @include onHover($primary_on_hover, pointer);
 }
+
 .plus-secondary{
     color: $secondary_color;
     @include onHover($secondary_on_hover, pointer)
 }
+
 .plus-ternary{
     color: $ternary_color;
     @include onHover($ternary_on-hover, pointer)
 }
+
 .points-text{
     font-size: $font-large;
     font-family: $font;
     background-color: $white;
     cursor: default;
+}
+
+@keyframes waves {
+    0%{
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(0.5rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
 }

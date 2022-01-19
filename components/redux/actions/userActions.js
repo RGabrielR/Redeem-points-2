@@ -1,7 +1,8 @@
 import * as t from '../types';
+
 export const fetchUser = () => {
       return  (dispatch) => {
-        fetch('https://coding-challenge-api.aerolab.co/user/me',
+        fetch(process.env.NEXT_PUBLIC_USER,
           { headers: {
             'Authorization': process.env.NEXT_PUBLIC_AUTHKEY
           }}
@@ -13,8 +14,8 @@ export const fetchUser = () => {
               })
           .catch(error => 
               dispatch(fetchUserError(error)))
-};
 }
+};
 
 export const fetchUserSuccess = user => {
   return {
@@ -22,6 +23,7 @@ export const fetchUserSuccess = user => {
     payload: user
   }
 };
+
 export const fetchUserError = error => {
   return {
     type: t.FETCH_USER_ERROR,
@@ -31,7 +33,7 @@ export const fetchUserError = error => {
 
 export const buy1000 =  () => {
   return async (dispatch) => {
-    await fetch('https://coding-challenge-api.aerolab.co/user/points',
+    await fetch(process.env.NEXT_PUBLIC_POINTS,
           {
             method: 'POST',
            headers: {
@@ -45,9 +47,10 @@ export const buy1000 =  () => {
            console.log("llego aca")
   }
 };
+
 export const buy5000 =  () => {
   return async (dispatch) => {
-    await fetch('https://coding-challenge-api.aerolab.co/user/points',
+    await fetch(process.env.NEXT_PUBLIC_POINTS,
           {
             method: 'POST',
            headers: {
@@ -61,9 +64,10 @@ export const buy5000 =  () => {
            console.log("llego aca")
   }
 };
+
 export const buy7500 =  () => {
   return async (dispatch) => {
-    await fetch('https://coding-challenge-api.aerolab.co/user/points',
+    await fetch(process.env.NEXT_PUBLIC_POINTS,
           {
             method: 'POST',
            headers: {
@@ -76,6 +80,6 @@ export const buy7500 =  () => {
            dispatch(fetchUser());
            console.log("llego aca")
   }
-}
+};
 
 

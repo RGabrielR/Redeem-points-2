@@ -1,0 +1,55 @@
+@use './font.scss';
+@use './colors.scss';
+@use './sizesAndSpaces.scss';
+
+
+@mixin headerLink($color){
+    background-color: $color;
+    padding: 0.5em 3rem 1rem 3rem;
+    border-bottom-left-radius: 90%;
+    border-bottom-right-radius: 90%;
+    cursor: pointer;
+    transform: translateY(- sizesAndSpaces.$hide-link-space);
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-duration: 0.5s;
+    &:hover{
+        transform: translateY(0);
+    }
+    @media screen and (max-width: sizesAndSpaces.$phone) {
+        transform: translateY(0);
+        padding: 1rem;
+    }
+    @media screen and (max-width: sizesAndSpaces.$monitor) {
+        transform: translateY(0);
+    }
+}
+
+@mixin onHover($darker, $cursor){
+    cursor: $cursor;
+    &:hover{
+        color: $darker;
+}}
+
+@mixin blocksOnHeader($width, $color){
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    width: $width;
+    background-color: $color;
+}
+
+@mixin vaultText($font-size){
+    color: colors.$white;
+    text-align: center;
+    cursor: default;
+    text-shadow: 0px 5px 7px rgb(0, 0, 0);
+    font-family: font.$font;
+    font-size: $font-size;
+}
+
+@mixin footerBlocks ($color, $height) {
+    width: 100%;
+    background-color: $color;
+    height: $height;
+}
+
+
