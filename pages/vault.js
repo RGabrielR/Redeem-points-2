@@ -5,7 +5,7 @@ import VaultHeader from '../components/frontendComponents/elements/VaultHeader';
 import VaultTable from "../components/frontendComponents/elements/VaultTable";
 import Footer from '../components/frontendComponents/elements/Footer';
 
-const vault = (props) => {
+const Vault = (props) => {
     const {redeemHistory} = props.user.user;
     const {fetchUser} = props;
 
@@ -38,5 +38,5 @@ const mapStateToProps = (state) => ({
     }
    };
 
-export default connect(mapStateToProps,mapDispatchToProps)(vault);
+export default connect(mapStateToProps,mapDispatchToProps)(Vault);
  

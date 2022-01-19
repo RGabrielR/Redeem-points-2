@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const VaultTable = ({ redeemHistory }) => {
-  const [tableElements, setTableElements] = useState(vault);
+  const [tableElements, setTableElements] = useState(Vault);
 
   useEffect(() => {
-    setTableElements(vault);
+    setTableElements(Vault);
   }, []);
 
   const group = (arr) => {
@@ -23,7 +23,7 @@ const VaultTable = ({ redeemHistory }) => {
 
   const grouped = group(redeemHistory);
 
-  const vault = grouped.map((idOfProduct) => {
+  const Vault = grouped.map((idOfProduct) => {
     const { id, count } = idOfProduct;
     const vaultObj = redeemHistory.find((a) => a.productId === id);
     const { name, cost } = vaultObj;
