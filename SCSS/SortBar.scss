@@ -1,0 +1,6 @@
+@use './elements/index.scss' as *; 
+
+.sortBar{
+    font-family: $font;
+    font-size: $font-large;
+}

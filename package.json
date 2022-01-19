@@ -1,0 +1,41 @@
+{
+  "name": "aerolabcontest",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@material-tailwind/react": "0.3.4",
+    "fs": "^0.0.1-security",
+    "net": "^1.0.2",
+    "next": "11.0.1",
+    "next-redux-wrapper": "^7.0.2",
+    "node": "^16.5.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.4",
+    "react-select": "^4.3.1",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.48.0",
+    "sweetalert2": "^11.1.2",
+    "tls": "^0.0.1",
+    "uninstall": "^0.0.0",
+    "webpack": "^5.47.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "autoprefixer": "^10.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.0.1",
+    "postcss": "^8.3.6",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.2.6"
+  }
+}

@@ -1,0 +1,35 @@
+@use './elements/index.scss' as *;
+
+.product-card{
+    background: linear-gradient(0deg, $black 0%,$white 20%, white 100%);
+    border-radius: 5%;
+}
+.title-card{
+    font-size: $font-large;
+    font-family: $font;
+    text-align: center;
+    color: $black;
+    border: solid $secondary_color $standar;
+    cursor: default;
+}
+.points-amount{
+    font-family: $font;
+    font-size: $font-large;
+    background-color: $ternary-color;
+    cursor: default;
+}
+.pts{
+    font-family: $font;
+    font-weight: bold;
+    cursor: default;
+}
+.can-purchase-text{
+    font-family: $font;
+    font-size: $font-small;
+}
+.primary-fill{
+    color: $primary_color;
+}
+.secondary-fill{
+    color: $secondary_color;
+}

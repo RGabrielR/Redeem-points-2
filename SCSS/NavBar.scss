@@ -1,0 +1,61 @@
+@use './elements/index.scss' as *;
+@mixin onHover($darker, $cursor){
+    cursor: $cursor;
+    &:hover{
+        color: $darker;
+}}
+.title{
+    width: 80%;
+    color: $white;
+    font-family: $font;
+    font-size: $font-xl;
+    cursor: default;
+}
+.first-block{
+    background-color: $black;
+    padding: 1rem 1.5rem;
+    width: 90%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+   
+}
+.second-block{
+    background-color: $ternary_color;
+    width: 90%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.third-block{
+    background-color: $secondary_color;
+    width: 90%;   
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.fourth-block{
+    background-color: $primary_color;
+    width: 40%;   
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.navBar{
+    background-color: $black;
+    width: 100%;
+}
+.plus-primary{
+    color: $primary_color;
+    @include onHover($primary_on_hover, pointer);
+}
+.plus-secondary{
+    color: $secondary_color;
+    @include onHover($secondary_on_hover, pointer)
+}
+.plus-ternary{
+    color: $ternary_color;
+    @include onHover($ternary_on-hover, pointer)
+}
+.points-text{
+    font-size: $font-large;
+    font-family: $font;
+    background-color: $white;
+    cursor: default;
+}

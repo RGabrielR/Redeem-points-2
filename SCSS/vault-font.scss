@@ -1,0 +1,6 @@
+@use 'elements/index.scss' as *;
+
+.linear-gradient-font{
+    background: linear-gradient(0deg, white 0%, $white 25%, $black 50%);
+    overflow-x: hidden;
+}

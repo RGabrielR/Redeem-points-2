@@ -1,0 +1,32 @@
+@use './elements/index.scss' as *;
+
+.primary-block{
+    width: 100%;
+    background-color: $primary_color;
+    height: 10rem;
+    position: relative;
+    bottom: 0;
+}
+.secondary-block{
+    width: 100%;
+    background-color: $secondary_color;
+    height: 8rem;
+}
+.ternary-block{
+    width: 100%;
+    background-color: $ternary_color;
+    height: 6rem;
+}
+.last-block{
+    width: 100%;
+    background-color: $black;
+    height: 4rem;
+}
+.footer-text{
+    font-family: $font;
+    font-size: $font-large;
+    color: $white;
+    cursor: default;
+    text-shadow: 0px 5px 7px rgb(0, 0, 0);
+    text-align: center;
+}

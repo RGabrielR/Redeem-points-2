@@ -1,0 +1,22 @@
+@use './elements/index.scss' as *;
+
+
+.text-on-user{
+    color: $secondary-color;
+    font-family: $font;
+    font-size: $font-large;
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+    cursor: default;
+}
+
+.text-on-points{
+    color: $ternary-color;
+    font-family: $font;
+    font-size: $font-large;
+    margin-top: 0.2rem;
+    margin-right: 1rem;
+    cursor: default;
+}
+
+
