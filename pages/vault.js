@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { connect } from "react-redux";
 import { fetchUser } from "../components/redux/actions/userActions";
 import VaultHeader from '../components/frontendComponents/elements/VaultHeader';

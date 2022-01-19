@@ -42,7 +42,9 @@ const MainPage = (props) => {
     fetchUser();
     fetch_products();
   }, []);
-
+  console.log(process.env.NEXT_NEXT_PUBLIC_USER, process.env.NEXT_PUBLIC_POINTS,
+    process.env.NEXT_PUBLIC_PRODUCTS,
+    process.env.NEXT_PUBLIC_REDEEM)
   if(!user || !products) return 'loading...';
   
   return (
