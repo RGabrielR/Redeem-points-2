@@ -12,7 +12,7 @@ const Vault = (props) => {
     useEffect(() => {
       fetchUser()
       }, []);
-
+      if(!redeemHistory) return "loading..."
     return ( 
         <>
        <div className="linear-gradient-font">
