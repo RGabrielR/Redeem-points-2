@@ -46,8 +46,7 @@ const VaultTable = ({ redeemHistory }) => {
     }
   };
 
-  if (!tableElements) return "loading...";
-
+  if (!tableElements ) return "loading...";
   return (
     <>
       <div className="flex flex-col justify-center pt-5  mb-20">

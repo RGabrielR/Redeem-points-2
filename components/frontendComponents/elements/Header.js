@@ -7,7 +7,7 @@ const Header = ({ name, points }) => {
         <div className="flex flex-row flex justify-between align-center">
           <h1 className="text-on-user">{name}</h1>
           <div className="background-vaultButton">
-              <Link href="/Vault">
+              <Link href="/vault">
             <i className="fas fa-shopping-basket fa-3x"></i>
             </Link>
           </div>
