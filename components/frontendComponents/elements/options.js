@@ -1,8 +1,8 @@
 const options = [
-  {value: 'Predefined', label: 'predefined'},
-  {value: 'Highest', label: 'highest', },
-  {value: 'Lowest', label: 'lowest'},
-  {value: 'Can Afford', label: 'canAfford'},
-  {value: 'Cannot Afford', label: 'cannotAfford'}
+  {value: 'predefined', label: 'Predefined'},
+  {value: 'highest', label: 'Highest', },
+  {value: 'lowest', label: 'Lowest'},
+  {value: 'canAfford', label: 'Can Afford'},
+  {value: 'cannotAfford', label: 'Cannot Afford'}
 ];
 export default options;
